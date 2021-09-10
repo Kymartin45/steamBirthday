@@ -9,8 +9,7 @@ Get the date you created your Steam account.
 ### Clone this repo 
     Run this command in your terminal: 
 
-    `bash
-    git clone https://github.com/<your-github-username>/steamBirthday.git
-    `
+    `git clone https://github.com/<your-github-username>/steamBirthday.git`
+    
 
 [Don't know your SteamID? Click here](https://www.maketecheasier.com/find-steam-id/)
