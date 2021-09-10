@@ -1,6 +1,6 @@
 # steamBirthday
 Get the date you created your Steam account
-![](images/steamBday.jpg)
+![Steam Birthday](images/steamBday.jpg)
 
 This program uses the Steam API 
 
@@ -13,6 +13,13 @@ Grab your API key!
 
 ### Clone this repo 
 `git clone https://github.com/<your-github-username>/steamBirthday.git`
+
+
+### Installing 
+
+Install from pip: 
+
+`$ pip install steam-birthday`
     
 
 [Don't know your SteamID? Click here](https://www.maketecheasier.com/find-steam-id/)
