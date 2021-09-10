@@ -1,10 +1,9 @@
 import requests
-from requests import api
-import json 
 import time
 import argparse
+import config
 
-key = 'STEAM API KEY'
+key = config.API_KEY
 
 print('Steam Birthday 🎂 \n-----------------')
 print("Note: Must enter your SteamID (Custom URL name)\nDon't know your Steam ID? Check out the link below!\n")
@@ -15,7 +14,7 @@ parser.add_argument('--steamid', type=str, required=True)
 args = parser.parse_args()
 
 def getId():
-    req_url = f'http://api.steampowered.com/ISteamUser/ResolveVanityURL/v0001/?key={key}&vanityurl={args.steamid}'
+    req_url = f'http://api.steampowered.com/ISteamUser/ResolveVanityURL/v0001/?key={config.API_KEY}&vanityurl={args.steamid}'
     api_res = requests.get(req_url)
     res = api_res.json()
     steamId = res['response']['steamid']
@@ -24,7 +23,7 @@ def getId():
 getIdFunc = getId()
 
 def getPlayerSummary():
-    req_url = f'http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key={key}&steamids={getIdFunc}'
+    req_url = f'http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key={config.API_KEY}&steamids={getIdFunc}'
     api_res = requests.get(req_url)
     res = api_res.json()
     steamSummary = res['response']['players'][0]['timecreated']
