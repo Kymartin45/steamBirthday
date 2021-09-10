@@ -7,8 +7,6 @@ Get the date you created your Steam account.
 `python main.py --steamid {YOUR STEAM ID}`
 
 ### Clone this repo 
-Run this command in your terminal: 
-
 `git clone https://github.com/<your-github-username>/steamBirthday.git`
     
 
